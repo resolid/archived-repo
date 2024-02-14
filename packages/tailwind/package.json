@@ -1,0 +1,36 @@
+{
+  "name": "@resolid/tailwind",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "description": "Resolid TailwindCSS 预设",
+  "keywords": [
+    "resolid"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@resolid/config": "workspace:^"
+  },
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huijiewei/resolid-tailwind"
+  },
+  "license": "MIT"
+}
