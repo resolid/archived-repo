@@ -1,0 +1,16 @@
+{
+  "name": "@resolid/config",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "description": "Resolid 通用配置",
+  "keywords": ["resolid"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huijiewei/resolid-config.git"
+  },
+  "license": "MIT"
+}
