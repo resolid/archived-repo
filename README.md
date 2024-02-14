@@ -7,10 +7,19 @@
 [![PNPM](https://img.shields.io/badge/PNPM-F28D1A?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-
 ## 网站
 
 访问 [resolid.tech](https://resolid.tech).
+
+## 子项目
+
+| 包名                                                                     | 介绍               |
+| ------------------------------------------------------------------------ | ------------------ |
+| [@resolid/config](https://github.com/huijiewei/resolid-config)           | 通用配置包         |
+| [@resolid/react-hooks](https://github.com/huijiewei/resolid-react-hooks) | React Hooks        |
+| [@resolid/react-ui](https://github.com/huijiewei/resolid-react-ui)       | React 组件包       |
+| [@resolid/tailwind](https://github.com/huijiewei/resolid-tailwind)       | TailwindCSS 预设包 |
+| [@resolid/utils](https://github.com/huijiewei/resolid-utils)             | 基础工具包         |
 
 ## 贡献指南
 
