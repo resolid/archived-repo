@@ -4,9 +4,51 @@
   "type": "module",
   "sideEffects": false,
   "description": "Resolid 通用配置",
-  "keywords": ["resolid"],
+  "keywords": [
+    "resolid",
+    "eslint",
+    "prettier",
+    "typescript"
+  ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "src",
+    "tsconfig.base.json",
+    "tsconfig.react.json"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "exports": {
+    "./eslint.base": "./src/eslint.base.js",
+    "./eslint.react": "./src/eslint.react.js",
+    "./eslint.typescript": "./src/eslint.typescript.js",
+    "./prettier": "./src/prettier.js",
+    "./tsconfig.base": "./tsconfig.base.json",
+    "./tsconfig.react": "./tsconfig.react.json"
+  },
+  "dependencies": {
+    "@eslint/js": "^8.56.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "globals": "^14.0.0",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "typescript-eslint": "^7.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",
