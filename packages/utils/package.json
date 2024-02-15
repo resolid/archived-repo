@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "tsup"
   },
   "exports": {
     ".": {
@@ -25,7 +26,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@resolid/config": "workspace:^"
+    "@resolid/config": "workspace:^",
+    "tsup": "^8.0.2"
   },
   "peerDependencies": {},
   "repository": {

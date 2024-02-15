@@ -29,9 +29,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@resolid/config": "workspace:^"
+    "@resolid/config": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.2"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/huijiewei/resolid-react-ui"
