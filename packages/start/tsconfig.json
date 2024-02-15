@@ -1,0 +1,7 @@
+{
+  "extends": "@resolid/config/tsconfig.react",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

@@ -16,7 +16,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.2",
-    "@types/node": "^20.11.17",
+    "@types/node": "^20.11.18",
     "lefthook": "^1.6.1",
     "typescript": "^5.3.3"
   },
@@ -31,6 +31,7 @@
   },
   "pnpm": {
     "overrides": {
+      "esbuild": "^0.20.0",
       "hasown": "npm:@nolyfill/hasown@latest",
       "array-includes": "npm:@nolyfill/array-includes@latest",
       "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
