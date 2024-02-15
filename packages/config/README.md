@@ -7,7 +7,7 @@ Resolid 通用配置, 包含了 `TypeScript`, `ESLint` 和 `Prettier` 的基础�
 ### 安装
 
 ```bash
-pnpm i -D eslint prettier typescript @resolid/config
+pnpm i -D eslint prettier @resolid/config
 ```
 
 ### TypeScript 配置
@@ -32,7 +32,9 @@ pnpm i -D eslint prettier typescript @resolid/config
 
 ### ESLint 配置
 
-本配置包是纯 ESM 包, 并使用了 ESLint 扁平配置, 所以推荐使用 `eslint.config.js` 文件来进行配置
+本配置包是纯 ESM 包, 并使用了 ESLint 扁平配置, 需要使用 `eslint.config.js` 文件来进行配置
+
+语言选项默认为 `ecmaVersion: 2022`, `sourceType: 'module'`
 
 #### TypeScript Lint 配置
 
@@ -52,6 +54,21 @@ import eslintReact from "@resolid/config/eslint.react";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [...eslintReact];
+```
+
+### ESLint 环境设置
+
+```js
+// eslint.config.js
+
+// 浏览器环境
+import eslintBowser from "@resolid/config/eslint.bowser";
+
+// Node 环境
+import eslintNode from "@resolid/config/eslint.node";
+
+/** @type {import('eslint').Linter.FlatConfig[]} */
+export default [...eslintBowser, ...eslintNode];
 ```
 
 ### Prettier 配置

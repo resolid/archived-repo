@@ -8,20 +8,28 @@ export default [
   ...eslintTypescript,
   {
     files: ["**/*.{jsx,tsx}"],
-    ...react.configs.recommended,
-    ...react.configs["jsx-runtime"],
+    plugins: {
+      react: react,
+    },
     rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs["jsx-runtime"].rules,
       "react/prop-types": "off",
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 2022,
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     settings: {
       react: {
         version: "detect",
       },
     },
-  },
-  {
-    files: ["**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {},
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
@@ -40,6 +48,18 @@ export default [
   },
   {
     files: ["**/*.{jsx,tsx}"],
-    ...jsxA11y.configs.recommended,
+    plugins: {
+      jsxA11y: jsxA11y,
+    },
+    rules: {
+      ...jsxA11y.configs.recommended.rules,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
   },
 ];
