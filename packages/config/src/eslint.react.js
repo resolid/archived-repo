@@ -49,7 +49,7 @@ export default [
   {
     files: ["**/*.{jsx,tsx}"],
     plugins: {
-      jsxA11y: jsxA11y,
+      "jsx-a11y": jsxA11y,
     },
     rules: {
       ...jsxA11y.configs.recommended.rules,
