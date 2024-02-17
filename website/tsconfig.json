@@ -1,0 +1,12 @@
+{
+  "extends": "@resolid/config/tsconfig.react",
+  "include": ["src", "env.d.ts", "vite.config.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@resolid/start": ["../packages/start/src/react"],
+      "@resolid/start/server": ["../packages/start/src/server"]
+    }
+  }
+}
