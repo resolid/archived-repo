@@ -1,9 +1,5 @@
 import { defineConfig } from "tsup";
-import {
-  dependencies,
-  devDependencies,
-  peerDependencies,
-} from "./package.json";
+import { dependencies, devDependencies, peerDependencies } from "./package.json";
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({

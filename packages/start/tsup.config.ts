@@ -1,18 +1,38 @@
-import { defineConfig } from "tsup";
-import {
-  dependencies,
-  devDependencies,
-  peerDependencies,
-} from "./package.json";
+import { defineConfig, type Options } from "tsup";
+import { dependencies, devDependencies, peerDependencies } from "./package.json";
 
-// noinspection JSUnusedGlobalSymbols
-export default defineConfig({
-  entry: ["src/index.ts"],
+const baseConfig: Options = {
   format: ["esm"],
-  target: "es2022",
   external: [...Object.keys(peerDependencies), ...Object.keys(devDependencies)],
   noExternal: Object.keys(dependencies),
   dts: true,
   treeshake: true,
   clean: true,
-});
+};
+
+// noinspection JSUnusedGlobalSymbols
+export default defineConfig([
+  {
+    ...baseConfig,
+    entry: {
+      index: "src/react/index.ts",
+    },
+    target: "es2022",
+  },
+  {
+    ...baseConfig,
+    entry: {
+      server: "src/server/index.ts",
+    },
+    platform: "node",
+    target: "node20",
+  },
+  {
+    ...baseConfig,
+    entry: {
+      vite: "src/vite/index.ts",
+    },
+    platform: "node",
+    target: "node20",
+  },
+]);
