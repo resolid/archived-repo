@@ -16,7 +16,8 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write .",
-    "build": "tsup"
+    "build": "tsup",
+    "watch": "tsup --watch"
   },
   "exports": {
     ".": {
@@ -36,7 +37,8 @@
   "devDependencies": {
     "@remix-run/router": "^1.15.1",
     "@resolid/config": "workspace:^",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.56",
+    "minimatch": "^9.0.3",
     "react": "^18.2.0",
     "react-router-dom": "^6.22.1",
     "tsup": "^8.0.2",
